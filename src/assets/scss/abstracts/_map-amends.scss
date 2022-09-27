@@ -3,7 +3,11 @@ $custom-spacers: (
   7: $spacer * 4,
   8: $spacer * 4.5,
   9: $spacer * 5,
-  10: $spacer * 8,
+  10: $spacer * 9,
 );
-
 $spacers: map-merge($spacers, $custom-spacers);
+
+$custom-colors: (
+  "riot-red": #b50f1b,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);

@@ -1,11 +1,27 @@
 @import "./abstracts/variables";
-
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
+@font-face {
+  font-family: "Oswald";
+  src: url(../fonts/Oswald-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.form-control:focus,
+select:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
 @import "./abstracts/map-amends";
+
 @import "~bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
   @each $spacer, $value in $spacers {
