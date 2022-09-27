@@ -1,0 +1,9 @@
+$custom-spacers: (
+  6: $spacer * 3.5,
+  7: $spacer * 4,
+  8: $spacer * 4.5,
+  9: $spacer * 5,
+  10: $spacer * 8,
+);
+
+$spacers: map-merge($spacers, $custom-spacers);

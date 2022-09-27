@@ -1,0 +1,28 @@
+{
+  "name": "travl-diplomski",
+  "version": "1.0.0",
+  "description": "Sajt za rezervaciju avio karata.",
+  "source": "./src/index.html",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rasgrin/travl-diplomski.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rasgrin/travl-diplomski/issues"
+  },
+  "homepage": "https://github.com/Rasgrin/travl-diplomski#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "typescript": "^4.8.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
+}
