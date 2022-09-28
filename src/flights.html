@@ -47,9 +47,9 @@
         <div class="d-flex flex-row">
           <h1 class="fw-normal">PLANE TICKETS FOR THE BEST PRICE</h1>
           <div class="d-flex flex-row ms-auto fs-4">
-            <p>FIRST</p>
-            <p class="mx-4">BUSSINES</p>
-            <p>ECONOMY</p>
+            <p class="fw-normal">FIRST</p>
+            <p class="mx-4 fw-normal text-muted">BUSSINES</p>
+            <p class="fw-normal text-muted">ECONOMY</p>
           </div>
         </div>
         <h2 class="fw-lighter">QUICK AND EASY BOOKING</h2>
@@ -101,9 +101,66 @@
     <!-- CONTAINER FOR NEWSLETTER AND FOOTER -->
     <div class="container-fluid mt-10 gx-0">
       <!-- NEWSLETTER -->
-      <div class="d-flex flex-column bg-riot-red py-8"></div>
-      <!-- FOOTER -->
-      <div class="d-flex flex-column bg-dark py-11"></div>
+      <div class="bg-riot-red py-8 justify-content-center align-items-center">
+        <div class="container d-flex flex-row">
+          <input type="text" class="form-control w-75 fs-2 py-4 text-center shadow" placeholder="Enter your email for more deals and news" aria-label="Username" aria-describedby="basic-addon1" />
+          <button type="button" class="btn btn-dark text-light ms-3 fs-2 py-4 px-9">SUBSCRIBE</button>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="bg-dark text-light py-9">
+      <div class="container d-flex flex-row justify-content-center">
+        <ul class="navbar-nav d-flex flex-column">
+          <li class="nav-item mx-4">
+            <a class="nav-link fs-4 fw-normal" aria-current="page" href="./index.html">HOME</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link fs-4 fw-normal" href="./flights.html">FLIGHTS</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link fs-4 fw-normal" href="#">DESTINATIONS</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link fs-4 fw-normal" href="#">CONTACT</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link fs-4 fw-normal" href="#">FAQ</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav d-flex flex-column ms-5">
+          <li class="nav-item mx-4">
+            <a class="nav-link fs-4 fw-normal active" aria-current="page" href="./index.html">SUPPORT</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link fs-4 fw-normal" href="./flights.html">PRODUCT HELP</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link fs-4 fw-normal" href="#">REPORT A PAGE ISSUE</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link fs-4 fw-normal" href="#">REPORT A SITE ISSUE</a>
+          </li>
+        </ul>
+
+        <div class="div mb-4 ms-auto">
+          <div class="input-group ms-3 mb-3">
+            <span class="input-group-text px-3 py-2 fs-4 bg-secondary text-white border border-secondary border-3" id="basic-addon1"><i class="bi bi-globe"></i></span>
+            <select class="form-select fs-5 text-center shadow" id="inputGroupSelect01">
+              <option value="1" selected>ENGLISH</option>
+              <option value="2">SERBIAN</option>
+            </select>
+          </div>
+          <div class="input-group ms-3 mb-3">
+            <span class="input-group-text px-3 py-2 fs-4 bg-secondary text-white border border-secondary border-3" id="basic-addon1"><i class="bi bi-coin"></i></span>
+            <select class="form-select fs-5 text-center shadow" id="inputGroupSelect01">
+              <option value="1" selected>USD</option>
+              <option value="2">RSD</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

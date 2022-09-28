@@ -47,9 +47,9 @@
         <div class="d-flex flex-row">
           <h1 class="fw-normal">PLANE TICKETS FOR THE BEST PRICE</h1>
           <div class="d-flex flex-row ms-auto fs-4">
-            <p>FIRST</p>
-            <p class="mx-4">BUSSINES</p>
-            <p>ECONOMY</p>
+            <p class="fw-normal">FIRST</p>
+            <p class="mx-4 fw-normal text-muted">BUSSINES</p>
+            <p class="fw-normal text-muted">ECONOMY</p>
           </div>
         </div>
         <h2 class="fw-lighter">QUICK AND EASY BOOKING</h2>
@@ -93,31 +93,46 @@
         <h2 class="fw-lighter">PLAN NEXT JOURNEYS</h2>
 
         <div class="d-flex flex-row mb-5 justify-content-between">
-          <div class="d-flex flex-column align-items-start">
-            <div class="mt-5 px-10 py-11 bg-light shadow"></div>
-            <p class="fs-2 fw-normal mt-3 m-0">CITY</p>
-            <p class="fs-4 fw-lighter mt-1 mb-0">COUNTRY</p>
+          <div class="d-flex flex-column">
+            <div class="mt-5 bg-light shadow" style="height: 5rem; width: 18rem">
+              <a href="#"><img class="img-fluid" src="./assets/img/rocamadours-porte-basse.jpg" alt="" /></a>
+            </div>
+            <div class="mt-12">
+              <p class="fs-2 fw-normal mt-3 m-0">CITY</p>
+              <p class="fs-4 fw-lighter mt-1 mb-0">COUNTRY</p>
+            </div>
           </div>
 
-          <div class="d-flex flex-column align-items-start">
-            <div class="mt-5 px-10 py-11 bg-light shadow"></div>
-            <p class="fs-2 fw-normal mt-3 m-0">CITY</p>
-            <p class="fs-4 fw-lighter mt-1 mb-0">COUNTRY</p>
+          <div class="d-flex flex-column">
+            <div class="mt-5 bg-light" style="height: 5rem; width: 18rem">
+              <a href="#"><img class="img-fluid" src="./assets/img/rocamadours-porte-basse.jpg" alt="" /></a>
+            </div>
+            <div class="mt-12">
+              <p class="fs-2 fw-normal mt-3 m-0">CITY</p>
+              <p class="fs-4 fw-lighter mt-1 mb-0">COUNTRY</p>
+            </div>
           </div>
 
-          <div class="d-flex flex-column align-items-start">
-            <div class="mt-5 px-10 py-11 bg-light shadow"></div>
-            <p class="fs-2 fw-normal mt-3 m-0">CITY</p>
-            <p class="fs-4 fw-lighter mt-1 mb-0">COUNTRY</p>
+          <div class="d-flex flex-column">
+            <div class="mt-5 bg-light" style="height: 5rem; width: 18rem">
+              <a href="#"><img class="img-fluid" src="./assets/img/rocamadours-porte-basse.jpg" alt="" /></a>
+            </div>
+            <div class="mt-12">
+              <p class="fs-2 fw-normal mt-3 m-0">CITY</p>
+              <p class="fs-4 fw-lighter mt-1 mb-0">COUNTRY</p>
+            </div>
           </div>
 
-          <div class="d-flex flex-column align-items-start">
-            <div class="mt-5 px-10 py-11 bg-light shadow"></div>
-            <p class="fs-2 fw-normal mt-3 m-0">CITY</p>
-            <p class="fs-4 fw-lighter mt-1 mb-0">COUNTRY</p>
+          <div class="d-flex flex-column">
+            <div class="mt-5 bg-light" style="height: 5rem; width: 18rem">
+              <a href="#"><img class="img-fluid" src="./assets/img/rocamadours-porte-basse.jpg" alt="" /></a>
+            </div>
+            <div class="mt-12">
+              <p class="fs-2 fw-normal mt-3 m-0">CITY</p>
+              <p class="fs-4 fw-lighter mt-1 mb-0">COUNTRY</p>
+            </div>
           </div>
         </div>
-
         <a class="nav-link text-riot-red fs-4 ms-auto" href="#">MORE DESTINATIONS <i class="bi bi-arrow-right fs-2 ms-3"></i></a>
       </div>
       <!-- BLOG SECTION -->
@@ -126,7 +141,10 @@
         <h2 class="fw-lighter">NEW STORIES</h2>
 
         <div class="d-flex flex-row mt-5">
-          <div class="py-12 w-50 me-5 bg-light"></div>
+          <div class="w-50 me-5">
+            <img class="img-fluid" src="./assets/img/paris-seine.jpg" alt="" />
+          </div>
+
           <div class="d-flex w-50 flex-column">
             <div class="w-100 bg-light shadow" style="height: 30%"></div>
             <div class="w-100 my-5 bg-light" style="height: 30%"></div>
@@ -138,9 +156,78 @@
     <!-- CONTAINER FOR NEWSLETTER AND FOOTER -->
     <div class="container-fluid mt-10 gx-0">
       <!-- NEWSLETTER -->
-      <div class="d-flex flex-column bg-riot-red py-8"></div>
-      <!-- FOOTER -->
-      <div class="d-flex flex-column bg-dark py-11"></div>
+      <div class="bg-riot-red py-8 justify-content-center align-items-center">
+        <div class="container d-flex flex-row">
+          <input type="text" class="form-control w-75 fs-2 py-4 text-center shadow" placeholder="Enter your email for more deals and news" aria-label="Username" aria-describedby="basic-addon1" />
+          <button type="button" class="btn btn-dark text-light ms-3 fs-2 py-4 px-9">SUBSCRIBE</button>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="bg-dark text-light py-10">
+      <div class="container d-flex flex-column justify-content-center">
+        <div class="d-flex flex-row">
+          <ul class="navbar-nav d-flex flex-column">
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-4 fw-normal" aria-current="page" href="./index.html">HOME</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-4 fw-normal" href="./flights.html">FLIGHTS</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-4 fw-normal" href="#">DESTINATIONS</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-4 fw-normal" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-4 fw-normal" href="#">FAQ</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav d-flex flex-column ms-5">
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-4 fw-normal active" aria-current="page" href="./index.html">SUPPORT</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-4 fw-normal" href="./flights.html">PRODUCT HELP</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-4 fw-normal" href="#">REPORT A PAGE ISSUE</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-4 fw-normal" href="#">REPORT A SITE ISSUE</a>
+            </li>
+          </ul>
+
+          <div class="div mb-4 ms-auto">
+            <div class="input-group ms-3 mb-3">
+              <select class="form-select fs-5 text-center shadow" id="inputGroupSelect01">
+                <option value="1" selected>ENGLISH</option>
+                <option value="2">SERBIAN</option>
+              </select>
+            </div>
+            <div class="input-group ms-3 mb-3">
+              <select class="form-select fs-5 text-center shadow" id="inputGroupSelect01">
+                <option value="1" selected>USD</option>
+                <option value="2">RSD</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-row mt-5">
+          <a class="mx-3 fs-2 text-white" href="#"><i class="bi bi-facebook"></i></a>
+          <a class="mx-3 fs-2 text-white" href="#"><i class="bi bi-twitter"></i></a>
+          <a class="mx-3 fs-2 text-white" href="#"><i class="bi bi-instagram"></i></a>
+          <a class="mx-3 fs-2 text-white" href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+
+        <div class="d-flex flex-row mt-5 ms-4">
+          <p class="fs-4">COPYRIGHT 2022</p>
+          <a class="ms-auto fs-4 text-white text-decoration-none" href="#">BACK TO TOP</a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
