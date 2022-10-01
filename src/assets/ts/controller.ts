@@ -1,1 +1,2 @@
-import * as model from "./model";
+import "bootstrap";
+import "popper.js";

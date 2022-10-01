@@ -3,12 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./assets/scss/main.scss" />
     <script defer type="module" src="./assets/ts/controller.ts"></script>
     <title>Document</title>
   </head>
   <body>
+    <!-- MODAL -->
+    <div class="modal modal-md fade mt-8" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body m-3">
+            <div class="d-flex flex-row">
+              <p class="fs-2 mb-5">SIGN IN</p>
+              <button type="button" class="btn-close ms-auto mb-5 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="d-flex flex-column input-group mb-3">
+              <p>USERNAME</p>
+              <input type="text" class="w-100 form-control fs-3 text-center shadow" placeholder="" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+
+            <div class="d-flex flex-column input-group mb-3">
+              <p>PASSWORD</p>
+              <input type="password" class="w-100 form-control fs-3 text-center shadow" placeholder="" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+            <a class="fs-5" href="#">Forgot your password?</a>
+
+            <button type="button" class="btn btn-riot-red mt-5 fs-3 py-2 w-100">SIGN IN</button>
+
+            <p class="fs-5 mt-7">Don't have an account? <a href="#">Sign Up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- NAV -->
     <div class="container g-0">
       <nav class="navbar navbar-expand-lg bg-white my-lg-5 my-md-3 my-sm-3">
@@ -18,26 +46,26 @@
             <span class="navbar-toggler-icon fs-1"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item mx-4">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-lg-0 mt-md-5 mt-sm-5">
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
                 <a class="nav-link fs-4 fw-normal active" aria-current="page" href="./index.html">HOME</a>
               </li>
-              <li class="nav-item mx-4">
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
                 <a class="nav-link fs-4 fw-normal" href="./flights.html">FLIGHTS</a>
               </li>
-              <li class="nav-item mx-4">
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
                 <a class="nav-link fs-4 fw-normal" href="#">DESTINATIONS</a>
               </li>
-              <li class="nav-item mx-4">
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
                 <a class="nav-link fs-4 fw-normal" href="#">CONTACT</a>
               </li>
-              <li class="nav-item mx-4">
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
                 <a class="nav-link fs-4 fw-normal" href="#">FAQ</a>
               </li>
             </ul>
-            <a class="nav-link fs-4 me-5" href="#"><i class="bi bi-sun fs-2"></i></a>
+            <a class="nav-link fs-4 me-5 my-lg-0 my-md-5 my-sm-5" href="#"><i class="bi bi-sun fs-2"></i></a>
             <form class="d-flex" role="search">
-              <button type="button" class="btn btn-riot-red fs-4 px-7 py-3">SIGN IN</button>
+              <button type="button" class="btn btn-riot-red fs-4 px-7 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">SIGN IN</button>
             </form>
           </div>
         </div>
@@ -57,7 +85,7 @@
           </div>
         </div>
 
-        <div class="d-flex flex-lg-row flex-md-column flex-sm-column d-none-column mt-lg-5 mt-md-2 mt-sm-2">
+        <div class="d-flex flex-lg-row flex-md-column flex-sm-column mt-lg-5 mt-md-2 mt-sm-2">
           <div class="input-group mb-3">
             <span class="d-lg-block d-md-none d-sm-none d-none input-group-text px-8 py-4 fs-3 bg-riot-red text-white border-3 border-riot-red" id="basic-addon1"><i class="bi bi-geo-alt"></i></span>
             <input type="text" class="form-control fs-2 text-center shadow" placeholder="FROM" aria-label="Username" aria-describedby="basic-addon1" />
@@ -95,7 +123,7 @@
         <h1 class="fw-normal">POPULAR DESTINATIONS</h1>
         <h2 class="fw-lighter">PLAN NEXT JOURNEYS</h2>
 
-        <div class="d-flex flex-row mb-5 justify-content-between">
+        <div class="d-flex flex-row mt-5 mb-5 justify-content-between">
           <div class="d-flex flex-column me-lg-3 me-md-3 me-sm-3">
             <a href="#"><img class="img-fluid" src="./assets/img/destinations/rocamadours-porte-basse.jpg" alt="" /></a>
             <div class="d-flex flex-column">
@@ -221,7 +249,7 @@
               </li>
             </ul>
 
-            <div class="div mb-4 ms-lg-auto mt-md-5 mt-sm-5">
+            <div class="div mb-4 ms-lg-auto mt-lg-0 mt-md-5 mt-sm-5">
               <div class="input-group mb-3">
                 <select class="form-select fs-5 text-left shadow pe-10" id="inputGroupSelect01">
                   <option value="1" selected>ENGLISH</option>
@@ -236,7 +264,7 @@
               </div>
             </div>
           </div>
-          <div class="d-flex flex-row mt-5 justify-content-md-center justify-content-sm-center">
+          <div class="d-flex flex-row mt-5 justify-content-lg-start justify-content-md-center justify-content-sm-center">
             <a class="me-3 fs-2 text-white" href="#"><i class="bi bi-facebook"></i></a>
             <a class="mx-3 fs-2 text-white" href="#"><i class="bi bi-twitter"></i></a>
             <a class="mx-3 fs-2 text-white" href="#"><i class="bi bi-instagram"></i></a>
@@ -244,8 +272,8 @@
           </div>
 
           <div class="d-flex flex-lg-row flex-md-column-reverse flex-sm-column-reverse mt-5 text-md-center text-sm-center">
-            <p class="fs-6 fw-lighter my-lg-auto"><a class="text-riot-red text-decoration-none me-1" href="https://github.com/Rasgrin" target="_blank">STEFAN ROGIC</a> ©2022 ALL RIGHTS RESERVED</p>
-            <a class="ms-lg-auto fs-6 fw-lighter text-white text-decoration-none mt-lg-auto mb-md-10 mb-sm-10" href="#">BACK TO TOP</a>
+            <p class="fs-5 fw-lighter my-lg-auto"><a class="text-riot-red text-decoration-none me-1" href="https://github.com/Rasgrin" target="_blank">STEFAN ROGIC</a> ©2022 ALL RIGHTS RESERVED</p>
+            <a class="ms-lg-auto fs-5 fw-lighter text-white text-decoration-none mb-lg-0 mb-md-5 mb-sm-5" href="#">BACK TO TOP</a>
           </div>
         </div>
       </div>
