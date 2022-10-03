@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./assets/scss/main.scss" />
     <script defer type="module" src="./assets/ts/controller.ts"></script>
-    <title>Document</title>
+    <link rel="icon" href="./assets/img/logo/logo.png" />
+    <title>CONTACT</title>
   </head>
   <body>
     <!-- MODAL -->
@@ -63,8 +64,15 @@
                 <a class="nav-link fs-4 fw-normal" href="./faq.html">FAQ</a>
               </li>
             </ul>
-            <a class="nav-link fs-4 me-5 my-lg-0 my-md-5 my-sm-5" href="#"><i class="bi bi-sun fs-2"></i></a>
-            <form class="d-flex" role="search">
+            <form class="d-flex flex-lg-row flex-md-column flex-sm-column" role="search">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-lg-0 mt-md-5 mt-sm-5">
+                <li class="nav-item my-auto">
+                  <a class="nav-link fs-4 fw-normal active" href="./checkout.html"><i class="bi bi-cart3"></i></a>
+                </li>
+                <li class="nav-item my-auto mx-lg-4 mx-md-0 mx-sm-0">
+                  <a class="nav-link fs-5 fw-normal active" href="#"><i class="bi bi-sun fs-2"></i></a>
+                </li>
+              </ul>
               <button type="button" class="btn btn-riot-red fs-4 px-7 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">SIGN IN</button>
             </form>
           </div>
@@ -83,6 +91,7 @@
           <p class="fs-3">MESSAGE</p>
           <textarea class="form-control w-lg-75 fs-3 py-4 mb-5 text-left shadow" placeholder="" rows="3"></textarea>
           <button type="button" class="btn btn-riot-red text-light fs-4 py-2 w-100 mt-3">SEND</button>
+          <p class="fs-3 mt-7">Your question might already be answered. Check out <a href="./faq.html">FAQ page</a>.</p>
         </div>
       </div>
     </div>
