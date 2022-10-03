@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/scss/main.scss" />
+    <script defer type="module" src="./assets/ts/controller.ts"></script>
+    <link rel="icon" href="./assets/img/logo/logo.png" />
+    <title>FAQ</title>
+  </head>
+  <body>
+    <!-- MODAL -->
+    <div class="modal modal-md fade mt-8" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body m-3">
+            <div class="d-flex flex-row">
+              <p class="fs-2 mb-5">SIGN IN</p>
+              <button type="button" class="btn-close ms-auto mb-5 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="d-flex flex-column input-group mb-3">
+              <p>USERNAME</p>
+              <input type="text" class="w-100 form-control fs-3 text-center shadow" placeholder="" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+
+            <div class="d-flex flex-column input-group mb-3">
+              <p>PASSWORD</p>
+              <input type="password" class="w-100 form-control fs-3 text-center shadow" placeholder="" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+            <a class="fs-5" href="#">Forgot your password?</a>
+
+            <button type="button" class="btn btn-riot-red mt-5 fs-3 py-2 w-100">SIGN IN</button>
+
+            <p class="fs-5 mt-7">Don't have an account? <a href="./register.html">Sign Up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- NAV -->
+    <div class="container g-0">
+      <nav class="navbar navbar-expand-lg bg-white my-lg-5 my-md-3 my-sm-3">
+        <div class="container-fluid g-0">
+          <a class="navbar-brand fw-regular me-5 gx-0" href="./index.html"><img src="./assets/img/logo/logo.png" alt="logo" style="height: 60px" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fs-1"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-lg-0 mt-md-5 mt-sm-5">
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
+                <a class="nav-link fs-4 fw-normal" aria-current="page" href="./index.html">HOME</a>
+              </li>
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
+                <a class="nav-link fs-4 fw-normal" href="./flights.html">FLIGHTS</a>
+              </li>
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
+                <a class="nav-link fs-4 fw-normal" href="./destinations.html">DESTINATIONS</a>
+              </li>
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
+                <a class="nav-link fs-4 fw-normal" href="./contact.html">CONTACT</a>
+              </li>
+              <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
+                <a class="nav-link fs-4 fw-normal" href="./faq.html">FAQ</a>
+              </li>
+            </ul>
+            <form class="d-flex flex-lg-row flex-md-column flex-sm-column" role="search">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-lg-0 mt-md-5 mt-sm-5">
+                <li class="nav-item my-auto">
+                  <a class="nav-link fs-4 fw-normal active" href="./checkout.html"><i class="bi bi-cart3 fs-2"></i></a>
+                </li>
+                <li class="nav-item my-auto mx-lg-4 mx-md-0 mx-sm-0">
+                  <a class="nav-link fs-5 fw-normal active" href="#"><i class="bi bi-sun fs-2"></i></a>
+                </li>
+              </ul>
+              <button type="button" class="btn btn-riot-red fs-4 px-7 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">SIGN IN</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- PROFILE INFO -->
+      <div class="d-flex flex-row">
+        <h1 class="fw-normal">PROFILE INFO</h1>
+      </div>
+
+      <div class="d-flex flex-column mt-lg-5 mt-md-5 mt-md-5 shadow bg-light p-5">
+        <div class="d-flex flex-row">
+          <img src="./assets/img/pfp/Default_pfp.svg.png" alt="pfp" style="width: 200px" />
+          <div class="d-flex flex-column ms-auto text-end">
+            <p class="fs-1 fw-normal">Stefan Rogic</p>
+            <p class="fs-3 fw-normal">Stefanrogic95@gmai.com</p>
+            <a class="btn btn-riot-red fs-4 mt-3" href="#">EDIT PROFILE</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- YOUR FLIGHTS -->
+      <div class="d-flex flex-row mt-10">
+        <h1 class="fw-normal mb-5">YOUR FLIGHTS</h1>
+        <h1 class="fw-normal mb-5 ms-auto"></h1>
+      </div>
+
+      <div class="d-flex flex-lg-row flex-md-column flex-sm-column mb-5 w-100 py-5 bg-light shadow">
+        <div class="d-flex flex-row mb-lg-0 mb-md-3 mb-sm-3">
+          <img class="mx-5 img-fluid my-auto" src="./assets/img/airlines/Etihad-airways-logo.svg.png" alt="" style="width: 100px" />
+          <p class="text-center my-auto fs-4 me-lg-5 ms-lg-0 ms-md-auto ms-sm-auto">17. OCTOBER</p>
+          <p class="text-center my-auto fs-4 mx-5">14:00 - 17:00</p>
+        </div>
+        <div class="d-flex flex-row mb-lg-0 mb-md-3 mb-sm-3">
+          <p class="text-center my-auto fs-4 mx-5">BEG - BVA</p>
+          <p class="text-center my-auto fs-4 me-lg-5 me-md-auto me-sm-auto ms-lg-5 ms-md-5 ms-sm-5">2 SEATS</p>
+        </div>
+        <button type="button" class="btn btn-riot-red fs-5 ms-lg-auto me-lg-5 mx-lg-0 mx-md-5 mx-sm-5 mt-lg-0 mt-md-3 mt-sm-3">REFUND</button>
+      </div>
+
+      <div class="d-flex flex-lg-row flex-md-column flex-sm-column mb-5 w-100 py-5 bg-light shadow">
+        <div class="d-flex flex-row mb-lg-0 mb-md-3 mb-sm-3">
+          <img class="mx-5 img-fluid my-auto" src="./assets/img/airlines/Lufthansa-Logo.png" alt="" style="width: 100px" />
+          <p class="text-center my-auto fs-4 me-lg-5 ms-lg-0 ms-md-auto ms-sm-auto">24. OCTOBER</p>
+          <p class="text-center my-auto fs-4 mx-5">10:00 - 13:00</p>
+        </div>
+        <div class="d-flex flex-row mb-lg-0 mb-md-3 mb-sm-3">
+          <p class="text-center my-auto fs-4 mx-5">BEG - BVA</p>
+          <p class="text-center my-auto fs-4 me-lg-5 me-md-auto me-sm-auto ms-lg-5 ms-md-5 ms-sm-5">2 SEATS</p>
+        </div>
+        <button type="button" class="btn btn-riot-red fs-5 ms-lg-auto me-lg-5 mx-lg-5 mx-md-5 mx-sm-5 mt-lg-0 mt-md-3 mt-sm-3">REFUND</button>
+      </div>
+    </div>
+    <!-- CONTAINER FOR NEWSLETTER AND FOOTER -->
+    <div class="container-fluid mt-10 g-0">
+      <!-- NEWSLETTER -->
+      <div class="bg-riot-red py-8">
+        <div class="container d-flex flex-column justify-content-center align-items-center g-0">
+          <input type="text" class="form-control w-lg-75 fs-2 py-4 text-center shadow" placeholder="Enter your email for more deals and news" aria-label="Username" aria-describedby="basic-addon1" />
+          <button type="button" class="btn btn-dark text-light fs-2 py-4 w-100 mt-3">SUBSCRIBE</button>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="bg-dark text-light py-9">
+        <div class="container d-flexflex-column flex justify-content-center g-0">
+          <div class="d-none d-lg-flex d-md-none d-sm-none">
+            <ul class="navbar-nav d-flex flex-lg-column flex-md-row flex-sm-row justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link fs-4 fw-light" aria-current="page" href="./index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-4 fw-light mx-lg-0 mx-md-3 mx-sm-3" href="./flights.html">FLIGHTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-4 fw-light" href="./destinations.html">DESTINATIONS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-4 fw-light mx-lg-0 mx-md-3 mx-sm-3" href="./contact.html">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-4 fw-light" href="./faq.html">FAQ</a>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav d-lg-flex d-md-none d-sm-none flex-column ms-10">
+              <li class="nav-item">
+                <a class="nav-link fs-4 fw-light active" aria-current="page" href="#">SUPPORT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-4 fw-light" href="#">PRODUCT HELP</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-4 fw-light" href="#">REPORT A PAGE ISSUE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-4 fw-light ms-lg-0 ms-md-3 ms-sm-3" href="#">REPORT A SITE ISSUE</a>
+              </li>
+            </ul>
+
+            <div class="div mb-4 ms-lg-auto mt-lg-0 mt-md-5 mt-sm-5">
+              <div class="input-group mb-3">
+                <select class="form-select fs-5 text-left shadow pe-10" id="inputGroupSelect01">
+                  <option value="1" selected>ENGLISH</option>
+                  <option value="2">SERBIAN</option>
+                </select>
+              </div>
+              <div class="input-group mb-3">
+                <select class="form-select fs-5 text-left shadow pe-10" id="inputGroupSelect01">
+                  <option value="1" selected>USD</option>
+                  <option value="2">RSD</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row mt-5 justify-content-lg-start justify-content-md-center justify-content-sm-center">
+            <a class="me-3 fs-2 text-white" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="mx-3 fs-2 text-white" href="#"><i class="bi bi-twitter"></i></a>
+            <a class="mx-3 fs-2 text-white" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="mx-3 fs-2 text-white" href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+
+          <div class="d-flex flex-lg-row flex-md-column-reverse flex-sm-column-reverse mt-5 text-md-center text-sm-center">
+            <p class="fs-5 fw-lighter my-lg-auto">Copyright © <a class="text-riot-red text-decoration-none" href="https://github.com/Rasgrin" target="_blank">Stefan Rogic</a> 2022. All rights reserved.</p>
+            <a class="ms-lg-auto fs-5 fw-lighter text-white text-decoration-none mb-lg-0 mb-md-5 mb-sm-5" href="#">BACK TO TOP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
