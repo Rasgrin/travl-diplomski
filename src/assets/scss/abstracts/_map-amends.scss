@@ -13,8 +13,3 @@ $custom-colors: (
   "riot-red": #b50f1b,
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
-
-$custom-grid-breakpoints: (
-  mb: 246,
-);
-$grid-breakpoints: map-merge($grid-breakpoints, $custom-grid-breakpoints);
