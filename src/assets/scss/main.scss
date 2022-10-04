@@ -9,12 +9,6 @@
   font-family: "Oswald", sans-serif;
 }
 
-.form-control:focus,
-select:focus {
-  border-color: #28a745;
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-}
-
 @import "./abstracts/map-amends";
 
 @import "~bootstrap/scss/bootstrap";
