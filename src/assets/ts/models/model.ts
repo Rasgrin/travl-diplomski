@@ -1,20 +1,5 @@
-import * as firebase from "firebase/app";
-import * as firestore from "firebase/firestore";
-import * as authentication from "firebase/auth";
-
-// FIREBASE
-const firebaseConfig = {
-  apiKey: "AIzaSyClKsQ0RqE67VEGi0ly_cK2tHKmtQpNC08",
-  authDomain: "diplomski-risuio.firebaseapp.com",
-  projectId: "diplomski-risuio",
-  storageBucket: "diplomski-risuio.appspot.com",
-  messagingSenderId: "880031557579",
-  appId: "1:880031557579:web:d283e5b95f01059c72384e",
-};
-
-const app = firebase.initializeApp(firebaseConfig);
-const db = firestore.getFirestore(app);
-const auth = authentication.getAuth(app);
+// FIREBASE - FIRESTORE - AUTHENTICATION - STORAGE
+import { firebaseConfig, app, db, firebase, firestore, store, authentication, auth } from "../config";
 
 // CREDENTIALS - LOGIN
 const logEmailIn = <HTMLInputElement>document.querySelector(".log-email");
@@ -29,6 +14,7 @@ const regCPasswordIn = <HTMLInputElement>document.querySelector(".reg-cpassword"
 export const logBtn = <HTMLButtonElement>document.querySelector(`.log-btn`);
 export const regBtn = <HTMLButtonElement>document.querySelector(`.reg-btn`);
 
+//
 export const login = async () => {
   const email = logEmailIn?.value;
   const password = logPasswordIn?.value;
@@ -90,5 +76,6 @@ export const register = () => {
 
 export const logout = () => {
   localStorage.setItem("log", "false");
+  localStorage.removeItem("loggedUser");
   location.href = "./index.html";
 };
