@@ -1,5 +1,6 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import * as firebase from "firebase/app";
+import * as firestore from "firebase/firestore";
+import * as authentication from "firebase/auth";
 
 // FIREBASE
 const firebaseConfig = {
@@ -11,31 +12,42 @@ const firebaseConfig = {
   appId: "1:880031557579:web:d283e5b95f01059c72384e",
 };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const app = firebase.initializeApp(firebaseConfig);
+const db = firestore.getFirestore(app);
+const auth = authentication.getAuth(app);
 
 // CREDENTIALS - LOGIN
-const logEmailIn: any = document.querySelector(".log-email");
-const logPasswordIn: any = document.querySelector(".log-password");
+const logEmailIn = <HTMLInputElement>document.querySelector(".log-email");
+const logPasswordIn = <HTMLInputElement>document.querySelector(".log-password");
 
 // CREDETIALS - REGISTER
-const regEmailIn: any = document.querySelector(".reg-email");
-const regPasswordIn: any = document.querySelector(".reg-password");
-const regCPasswordIn: any = document.querySelector(".reg-cpassword");
+const regEmailIn = <HTMLInputElement>document.querySelector(".reg-email");
+const regPasswordIn = <HTMLInputElement>document.querySelector(".reg-password");
+const regCPasswordIn = <HTMLInputElement>document.querySelector(".reg-cpassword");
 
 // BUTTONS
-export const logBtn = document.querySelector(`.log-btn`);
-export const regBtn = document.querySelector(`.log-btn`);
+export const logBtn = <HTMLButtonElement>document.querySelector(`.log-btn`);
+export const regBtn = <HTMLButtonElement>document.querySelector(`.reg-btn`);
 
-export const login = () => {
+export const login = async () => {
   const email = logEmailIn?.value;
   const password = logPasswordIn?.value;
 
-  signInWithEmailAndPassword(auth, email, password)
+  authentication
+    .signInWithEmailAndPassword(auth, email, password)
     .then((res) => {
       console.log(res.user);
       console.log({ success: `User logged succesfuly.` });
       localStorage.setItem("log", "true");
+    })
+    .then(() => {
+      const q = firestore.query(firestore.collection(db, "users"), firestore.where("email", "==", email));
+      return firestore.getDocs(q);
+    })
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        localStorage.setItem("loggedUser", JSON.stringify(doc.data()));
+      });
       location.href = "./index.html";
     })
     .catch((err) => {
@@ -50,10 +62,24 @@ export const register = () => {
   const cPassword = regCPasswordIn?.value;
 
   if (password === cPassword) {
-    createUserWithEmailAndPassword(auth, email, password)
+    authentication
+      .createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
         console.log(res.user);
         console.log({ success: `User registered succesfuly.` });
+      })
+      .then(() => {
+        const data = {
+          firstName: "",
+          lastName: "",
+          email: email,
+          pfp: "default-pfp.png",
+          cart: [],
+          reservations: [],
+        };
+
+        const newUser = firestore.doc(firestore.collection(db, "users"));
+        firestore.setDoc(newUser, data);
       })
       .catch((err) => {
         console.log({ error: err.message });
