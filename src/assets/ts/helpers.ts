@@ -3,6 +3,11 @@ import { getDownloadURL } from "firebase/storage";
 import { db, firestore, store } from "./config";
 
 // FIRESTORE MANIPULATION FUNCTIONS
+export const findDocumentById = async (collection: string, id: string) => {
+  const docRef = firestore.doc(db, collection, id);
+  return await firestore.getDoc(docRef);
+};
+
 export const findDocument = async (collection: string, arg: any, field: string, fieldV: string) => {
   try {
     const q: any = firestore.query(firestore.collection(db, collection), firestore.where(field, arg, fieldV));
@@ -29,8 +34,8 @@ export const addDocument = async (collection: string, data: object) => {
 
 export const updateDocument = async (collection: string, id: string, data: object) => {
   try {
-    const washingtonRef = firestore.doc(db, collection, id);
-    await firestore.updateDoc(washingtonRef, data);
+    const documentRef = firestore.doc(db, collection, id);
+    await firestore.updateDoc(documentRef, data);
   } catch (err) {}
 };
 

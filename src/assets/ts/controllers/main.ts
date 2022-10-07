@@ -4,9 +4,10 @@ import "popper.js";
 import registerView from "../views/registerView";
 import profileView from "../views/profileView";
 import destinationsView from "../views/destinationsView";
-import * as model from "../models/model";
 import navView from "../views/navView";
 import searchView from "../views/searchView";
+import checkoutView from "../views/checkoutView";
+import * as model from "../models/model";
 
 const controlNav = () => {
   navView.renderNav();
@@ -32,6 +33,11 @@ const controlDestinations = () => {
 const controlSearch = () => {
   searchView.renderSearchResults();
   searchView.addSearchHandler([...model.from, ...model.to], "keyup");
+  searchView.addReserveHandler();
+};
+
+const controlCheckout = () => {
+  checkoutView.renderCheckout();
 };
 
 const init = () => {
@@ -41,5 +47,6 @@ const init = () => {
   if (location.href === "http://localhost:1234/profile.html") controlProfile();
   if (location.href === "http://localhost:1234/destinations.html") controlDestinations();
   if (location.href === "http://localhost:1234/index.html" || location.href === "http://localhost:1234/flights.html") controlSearch();
+  if (location.href === "http://localhost:1234/checkout.html") controlCheckout();
 };
 init();

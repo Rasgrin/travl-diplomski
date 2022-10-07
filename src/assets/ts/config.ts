@@ -23,4 +23,6 @@ export const auth: any = authentication.getAuth(app);
 if (localStorage.getItem("log") === null) localStorage.setItem("log", "false");
 if (localStorage.getItem("theme") === null) localStorage.setItem("theme", "light");
 if (localStorage.getItem("language") === null) localStorage.setItem("language", "EN");
-if (localStorage.getItem("search") === null) localStorage.setItem("search", JSON.stringify({ from: "", to: "" }));
+if (localStorage.getItem("search") === null || location.href === "http://localhost:1234/index.html") localStorage.setItem("search", JSON.stringify({ from: "", to: "" }));
+
+export const DEFAULT_LOCATION = "Belgrade";

@@ -36,7 +36,11 @@ export const login = async () => {
     })
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        localStorage.setItem("loggedUser", JSON.stringify(doc.data()));
+        const data = {
+          id: doc.id,
+          ...doc.data(),
+        };
+        localStorage.setItem("loggedUser", JSON.stringify(data));
       });
       location.href = "./index.html";
     })

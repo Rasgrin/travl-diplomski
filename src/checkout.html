@@ -88,11 +88,11 @@
                       <a class="dropdown-item d-flex flex-row" href="./checkout.html">Checkout <i class="bi bi-credit-card ms-auto"></i></a>
                     </li>
                     <li>
-                      <a class="dropdown-item d-flex flex-row" href="#">Settings <i class="bi bi-box-arrow-right ms-auto"></i></a>
+                      <a class="dropdown-item d-flex flex-row" href="#">Settings <i class="bi bi-gear ms-auto"></i></a>
                     </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
-                      <button type="button" class="logout-btn dropdown-item d-flex flex-row my-auto">Logout <i class="bi bi-gear ms-auto"></i></button>
+                      <button type="button" class="logout-btn dropdown-item d-flex flex-row my-auto">Logout <i class="bi bi-box-arrow-right ms-auto"></i></button>
                     </li>
                   </ul>
                 </li>
@@ -102,43 +102,13 @@
           </div>
         </div>
       </nav>
-      <!-- SEARCH RESULTS -->
-      <div class="d-flex flex-column mt-10">
-        <div class="d-flex flex-row">
-          <h1 class="fw-normal mb-5">YOUR FLIGHTS</h1>
-          <h1 class="fw-normal mb-5 ms-auto"></h1>
-        </div>
-
-        <div class="d-flex flex-lg-row flex-md-column flex-sm-column mb-5 w-100 py-5 bg-light shadow">
-          <div class="d-flex flex-row mb-lg-0 mb-md-3 mb-sm-3">
-            <img class="mx-5 img-fluid my-auto" src="./assets/img/airlines/etihad.png" alt="" style="width: 100px" />
-            <p class="text-center my-auto fs-4 me-lg-5 ms-lg-0 ms-md-auto ms-sm-auto">17. OCTOBER</p>
-            <p class="text-center my-auto fs-4 mx-5">14:00 - 17:00</p>
-          </div>
-          <div class="d-flex flex-row mb-lg-0 mb-md-3 mb-sm-3">
-            <p class="text-center my-auto fs-4 mx-5">BEG - BVA</p>
-            <p class="text-center my-auto fs-4 me-lg-5 me-md-auto me-sm-auto ms-lg-5 ms-md-5 ms-sm-5">2 SEATS</p>
-            <p class="text-center my-auto fs-4 mx-5">$199.99 x 2</p>
-          </div>
-          <button type="button" class="btn btn-riot-red fs-5 ms-lg-auto me-lg-5 mx-lg-0 mx-md-5 mx-sm-5 mt-lg-0 mt-md-3 mt-sm-3">REMOVE</button>
-        </div>
-
-        <div class="d-flex flex-lg-row flex-md-column flex-sm-column mb-5 w-100 py-5 bg-light shadow">
-          <div class="d-flex flex-row mb-lg-0 mb-md-3 mb-sm-3">
-            <img class="mx-5 img-fluid my-auto" src="./assets/img/airlines/lufthansa.png" alt="" style="width: 100px" />
-            <p class="text-center my-auto fs-4 me-lg-5 ms-lg-0 ms-md-auto ms-sm-auto">24. OCTOBER</p>
-            <p class="text-center my-auto fs-4 mx-5">10:00 - 13:00</p>
-          </div>
-          <div class="d-flex flex-row mb-lg-0 mb-md-3 mb-sm-3">
-            <p class="text-center my-auto fs-4 mx-5">BEG - BVA</p>
-            <p class="text-center my-auto fs-4 me-lg-5 me-md-auto me-sm-auto ms-lg-5 ms-md-5 ms-sm-5">2 SEATS</p>
-            <p class="text-center my-auto fs-4 mx-5">$199.99 x 2</p>
-          </div>
-          <button type="button" class="btn btn-riot-red fs-5 ms-lg-auto me-lg-5 mx-lg-0 mx-md-5 mx-sm-5 mt-lg-0 mt-md-3 mt-sm-3">REMOVE</button>
-        </div>
-        <p class="fs-3">TOTAL: $399.98</p>
-        <button type="button" class="btn btn-riot-red fs-3 py-2 mt-5">CONFIRM RESERVATION</button>
+      <!-- CHECKOUT -->
+      <div class="d-flex flex-row mt-5">
+        <h1 class="fw-normal">YOUR PENDING RESERVATIONS</h1>
+        <h1 class="search-hash fw-normal ms-auto text-end"></h1>
       </div>
+      <div class="checkout-container d-flex flex-column mt-5"></div>
+      <button type="button" class="btn btn-riot-red fs-3 py-2 mt-5 w-100">CONFIRM RESERVATION</button>
     </div>
     <!-- CONTAINER FOR NEWSLETTER AND FOOTER -->
     <div class="footer-container container-fluid mt-10 g-0">
