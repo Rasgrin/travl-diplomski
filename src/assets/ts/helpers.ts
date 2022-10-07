@@ -10,37 +10,33 @@ export const findDocument = async (collection: string, arg: any, field: string, 
   } catch (err) {}
 };
 
+export const findCollection = async (collection: string) => {
+  return await firestore.getDocs(firestore.collection(db, collection));
+};
+
 export const addDocument = async (collection: string, data: object) => {
   try {
     await firestore.setDoc(firestore.doc(db, collection), data);
-  } catch (err) {
-    throw err;
-  }
+  } catch (err) {}
 };
 
 export const updateDocument = async (collection: string, id: string, data: object) => {
   try {
     const washingtonRef = firestore.doc(db, collection, id);
     await firestore.updateDoc(washingtonRef, data);
-  } catch (err) {
-    throw err;
-  }
+  } catch (err) {}
 };
 
 export const deleteDocument = async (collection: string, id: string) => {
   try {
     await firestore.deleteDoc(firestore.doc(db, collection, id));
-  } catch (err) {
-    // Errors
-  }
+  } catch (err) {}
 };
 
 export const downloadImg = async (path: string) => {
   try {
     const storage = store.getStorage();
     return await getDownloadURL(store.ref(storage, path));
-  } catch (err) {
-    // Errors
-  }
+  } catch (err) {}
 };
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

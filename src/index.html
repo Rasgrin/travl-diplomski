@@ -38,7 +38,13 @@
         </div>
       </div>
     </div>
-    <div class="container g-0">
+    <!-- SPINNER -->
+    <div class="spinner d-flex container-fluid justify-content-center align-items-center" style="width: 100%; height: 100vh">
+      <div class="spinner-border fs-1 text-riot-red" role="status" style="width: 8rem; height: 8rem">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div class="content-container d-none container g-0">
       <!-- NAV -->
       <nav class="navbar navbar-expand-lg bg-white my-lg-5 my-md-3 my-sm-3">
         <div class="container-fluid g-0">
@@ -71,17 +77,23 @@
                 </li>
                 <!-- IF USER IS LOGGED IN HIDE BUTTON AN SHOW ACCOUNT OPTIONS -->
                 <li class="d-none user-dropdown nav-item dropdown fs-2">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                    ><img class="nav-pfp mb-1" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg" alt="pfp" style="width: 40px; border-radius: 20px"
-                  /></a>
+                  <a class="nav-link dropdown-toggle pfp-dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-light fs-3">
                     <li><p class="dropdown-item-text drop-email my-auto">###</p></li>
                     <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
-                    <li><a class="dropdown-item" href="./checkout.html">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li>
+                      <a class="dropdown-item d-flex flex-row d-flex flex-row" href="./profile.html">Profile <i class="bi bi-person ms-auto"></i></a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-flex flex-row" href="./checkout.html">Checkout <i class="bi bi-credit-card ms-auto"></i></a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-flex flex-row" href="#">Settings <i class="bi bi-box-arrow-right ms-auto"></i></a>
+                    </li>
                     <li><hr class="dropdown-divider" /></li>
-                    <li><button type="button" class="logout-btn dropdown-item my-auto">Logout</button></li>
+                    <li>
+                      <button type="button" class="logout-btn dropdown-item d-flex flex-row my-auto">Logout <i class="bi bi-gear ms-auto"></i></button>
+                    </li>
                   </ul>
                 </li>
                 <button type="button" class="signin-btn btn btn-riot-red fs-4 px-7 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">SIGN IN</button>
@@ -151,7 +163,7 @@
 
         <div class="row d-flex flex-row mt-5 mb-5 justify-content-between">
           <div class="col-lg-3 col-md-5 col-sm-6 d-flex flex-column mb-5">
-            <a href="#"><img class="img-fluid" src="./assets/img/destinations/rocamadours-porte-basse.jpg" alt="" /></a>
+            <a href="#"><img class="img-fluid" src="./assets/img/destinations/default.jpg" alt="" /></a>
             <div class="d-flex flex-column">
               <p class="fs-2 fw-normal mt-3 m-0">Rocamadours Porte</p>
               <p class="fs-4 fw-lighter mt-1 mb-0">France</p>
@@ -159,7 +171,7 @@
           </div>
 
           <div class="col-lg-3 col-md-5 col-sm-6 d-flex flex-column mb-5">
-            <a href="#"><img class="img-fluid" src="./assets/img/destinations/Grand-Canal-Venice.jpg" alt="" /></a>
+            <a href="#"><img class="img-fluid" src="./assets/img/destinations/default.jpg" alt="" /></a>
             <div class="d-flex flex-column">
               <p class="fs-2 fw-normal mt-3 m-0">Venice</p>
               <p class="fs-4 fw-lighter mt-1 mb-0">Italy</p>
@@ -167,7 +179,7 @@
           </div>
 
           <div class="col-lg-3 col-md-5 col-sm-6 d-flex flex-column mb-5">
-            <a href="#"><img class="img-fluid" src="./assets/img/destinations/paris-vintage-car.jpg" alt="" /></a>
+            <a href="#"><img class="img-fluid" src="./assets/img/destinations/default.jpg" alt="" /></a>
             <div class="d-flex flex-column">
               <p class="fs-2 fw-normal mt-3 m-0">Paris</p>
               <p class="fs-4 fw-lighter mt-1 mb-0">France</p>
@@ -175,7 +187,7 @@
           </div>
 
           <div class="col-lg-3 col-md-5 col-sm-6 d-flex flex-column mb-5">
-            <a href="#"><img class="img-fluid" src="./assets/img/destinations/1-TARA3.jpg" alt="" /></a>
+            <a href="#"><img class="img-fluid" src="./assets/img/destinations/default.jpg" alt="" /></a>
             <div class="d-flex flex-column">
               <p class="fs-2 fw-normal mt-3 m-0">Tara, National Park</p>
               <p class="fs-4 fw-lighter mt-1 mb-0">Serbia</p>
@@ -229,7 +241,7 @@
       </div>
     </div>
     <!-- CONTAINER FOR NEWSLETTER AND FOOTER -->
-    <div class="container-fluid mt-10 g-0">
+    <div class="footer-container d-none container-fluid mt-10 g-0">
       <!-- NEWSLETTER -->
       <div class="bg-riot-red py-8">
         <div class="container d-flex flex-column justify-content-center align-items-center g-0">

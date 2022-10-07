@@ -21,7 +21,7 @@ class Profile {
       result?.forEach((user: any) =>
         user.data().reservations.forEach(async (reservation: any) => {
           try {
-            const airlineUrl: any = await downloadImg(`pfp/${reservation.airline}.png`);
+            const airlineUrl: any = await downloadImg(`airlines/${reservation.airline}.png`);
 
             const html: string = `
             <div class="d-flex flex-lg-row flex-md-column flex-sm-column mb-5 w-100 py-5 bg-light shadow">
@@ -32,7 +32,7 @@ class Profile {
               </div>
               <div class="d-flex flex-row ms-auto mb-lg-0 mb-md-3 mb-sm-3">
                 <p class="text-center my-auto fs-4 mx-5">${reservation.airports}</p>
-                <p class="text-center my-auto fs-4 me-5">${reservation.seats} TICKET/S</p>
+                <p class="text-center my-auto fs-4 me-5">${reservation.seats} ${Number(reservation.seats) > 1 ? "TICKETS" : "&nbsp TICKET"}</p>
               </div>
             </div>
             `;

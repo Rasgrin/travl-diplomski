@@ -1,11 +1,15 @@
 // HELPER FUNCTIONS
 import { downloadImg } from "../helpers";
 
-class View {
+class navView {
   private userDropdown = <HTMLButtonElement>document.querySelector(".user-dropdown");
   private signinBtn = <HTMLButtonElement>document.querySelector(".signin-btn");
-  private pfp = <HTMLImageElement>document.querySelector(".nav-pfp");
+  private pfpDropdown = <HTMLImageElement>document.querySelector(".pfp-dropdown");
   private dropEmail = <HTMLButtonElement>document.querySelector(".drop-email");
+
+  private spinner = <HTMLDivElement>document.querySelector(".spinner");
+  private contentContainer = <HTMLDivElement>document.querySelector(".content-container");
+  private footerContainer = <HTMLDivElement>document.querySelector(".footer-container");
 
   private userData = <any>JSON.parse(<string>localStorage.getItem("loggedUser"));
 
@@ -16,8 +20,18 @@ class View {
         this.signinBtn.classList.add("d-none");
 
         const url: any = await downloadImg(`pfp/${this.userData.pfp}`);
-        this.pfp.setAttribute("src", url);
+        this.pfpDropdown.insertAdjacentHTML(
+          "afterbegin",
+          `<img class="nav-pfp mb-1" src="${url}" alt="pfp" style="width: 40px; border-radius: 20px"
+        />`
+        );
         this.dropEmail.textContent = this.userData.email;
+
+        setTimeout(() => {
+          this.spinner.classList.replace("d-flex", "d-none");
+          this.contentContainer.classList.remove("d-none");
+          this.footerContainer.classList.remove("d-none");
+        }, 250);
       } else {
         this.userDropdown.classList.add("d-none");
         this.signinBtn.classList.remove("d-none");
@@ -46,4 +60,4 @@ class View {
     });
   }
 }
-export default new View();
+export default new navView();
