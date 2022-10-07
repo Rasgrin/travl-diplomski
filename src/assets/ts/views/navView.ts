@@ -13,6 +13,14 @@ class navView {
 
   private userData = <any>JSON.parse(<string>localStorage.getItem("loggedUser"));
 
+  private removeSpinner() {
+    setTimeout(() => {
+      this.spinner.classList.replace("d-flex", "d-none");
+      this.contentContainer.classList.remove("d-none");
+      this.footerContainer.classList.remove("d-none");
+    }, 250);
+  }
+
   public async renderNav() {
     try {
       if (localStorage.getItem("log") === "true") {
@@ -27,21 +35,19 @@ class navView {
         );
         this.dropEmail.textContent = this.userData.email;
 
-        setTimeout(() => {
-          this.spinner.classList.replace("d-flex", "d-none");
-          this.contentContainer.classList.remove("d-none");
-          this.footerContainer.classList.remove("d-none");
-        }, 250);
+        this.removeSpinner();
       } else {
         this.userDropdown.classList.add("d-none");
         this.signinBtn.classList.remove("d-none");
+
+        this.removeSpinner();
       }
     } catch (err) {}
   }
 
   // LOGIN HANDLING
   public addLoginHandler(btn: HTMLButtonElement, evs: string[], handler: any) {
-    evs.forEach((ev: any, i: number) =>
+    evs.forEach((ev: string, i: number) =>
       i === 0
         ? btn.addEventListener(ev, handler)
         : document.addEventListener(ev, (e: any) => {

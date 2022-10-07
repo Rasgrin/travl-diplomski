@@ -10,6 +10,13 @@ export const findDocument = async (collection: string, arg: any, field: string, 
   } catch (err) {}
 };
 
+export const findDocumentCompound = async (collection: string, firstArg: any, firstField: string, firstFieldV: string, secondArg: any, secondField: any, secondFieldV: any) => {
+  try {
+    const q: any = firestore.query(firestore.collection(db, collection), firestore.where(firstField, firstArg, firstFieldV), firestore.where(secondField, secondArg, secondFieldV));
+    return await firestore.getDocs(q);
+  } catch (err) {}
+};
+
 export const findCollection = async (collection: string) => {
   return await firestore.getDocs(firestore.collection(db, collection));
 };

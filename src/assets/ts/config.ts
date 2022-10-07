@@ -23,3 +23,4 @@ export const auth: any = authentication.getAuth(app);
 if (localStorage.getItem("log") === null) localStorage.setItem("log", "false");
 if (localStorage.getItem("theme") === null) localStorage.setItem("theme", "light");
 if (localStorage.getItem("language") === null) localStorage.setItem("language", "EN");
+if (localStorage.getItem("search") === null) localStorage.setItem("search", JSON.stringify({ from: "", to: "" }));

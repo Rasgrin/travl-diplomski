@@ -17,7 +17,7 @@ class Profile {
       this.profileEmail.textContent = this.userData.email;
 
       // LIST RESERVATION HISTORY
-      const result = await (<any>findDocument("users", "==", "email", this.userData.email));
+      const result = await findDocument("users", "==", "email", this.userData.email);
       result?.forEach((user: any) =>
         user.data().reservations.forEach(async (reservation: any) => {
           try {

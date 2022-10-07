@@ -14,6 +14,10 @@ const regCPasswordIn = <HTMLInputElement>document.querySelector(".reg-cpassword"
 export const logBtn = <HTMLButtonElement>document.querySelector(`.log-btn`);
 export const regBtn = <HTMLButtonElement>document.querySelector(`.reg-btn`);
 
+// INPUTS
+export const from = <NodeList>document.querySelectorAll(".from-input");
+export const to = <NodeList>document.querySelectorAll(".to-input");
+
 //
 export const login = async () => {
   const email = logEmailIn?.value;
