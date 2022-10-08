@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/scss/main.scss" />
     <script defer type="module" src="./assets/ts/controllers/main.ts"></script>
     <link rel="icon" href="./assets/img/logo/logo.png" />
-    <title>CONTACT</title>
+    <title>EDIT PROFILE</title>
   </head>
   <body>
     <!-- MODAL -->
@@ -64,7 +64,7 @@
                 <a class="nav-link fs-4 fw-normal" href="./destinations.html">DESTINATIONS</a>
               </li>
               <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
-                <a class="nav-link fs-4 fw-normal active" href="./contact.html">CONTACT</a>
+                <a class="nav-link fs-4 fw-normal" href="./contact.html">CONTACT</a>
               </li>
               <li class="nav-item mx-lg-4 mx-md-0 mx-sm-0">
                 <a class="nav-link fs-4 fw-normal" href="./faq.html">FAQ</a>
@@ -105,25 +105,30 @@
           </div>
         </div>
       </nav>
-      <!-- ALL DESTINATIONS -->
-      <div class="d-flex flex-column mt-lg-5 mt-md-5 mt-md-5">
-        <h1 class="fw-normal">CONTACT</h1>
-        <h2 class="fw-lighter">ASK US ANYTHING</h2>
+      <!-- PROFILE INFO -->
+      <div class="d-flex flex-row">
+        <h1 class="fw-normal">EDIT PROFILE</h1>
+      </div>
 
-        <div class="d-flex flex-column mt-5">
-          <p class="fs-5">EMAIL</p>
-          <input type="text" class="form-control w-lg-75 fs-5 py-2 mb-3 text-left shadow" placeholder="" aria-label="Username" aria-describedby="basic-addon1" />
-          <p class="fs-5">SUBJECT</p>
-          <input type="text" class="form-control w-lg-75 fs-5 py-2 mb-3 text-left shadow" placeholder="" aria-label="Username" aria-describedby="basic-addon1" />
-          <p class="fs-5">MESSAGE</p>
-          <textarea class="form-control w-lg-75 fs-5 py-4 mb-5 text-left shadow" placeholder="" rows="3"></textarea>
-          <button type="button" class="btn btn-riot-red text-light fs-4 py-2 w-100 mt-3">SEND</button>
-          <p class="fs-3 mt-7">Your question might already be answered. Check out <a href="./faq.html">FAQ page</a>.</p>
+      <div class="d-flex flex-column mt-5 mt-md-5 mt-sm-5 shadow bg-white p-5">
+        <div class="d-flex flex-row">
+          <div class="d-flex flex-column">
+            <img src="./assets/img/pfp/default-pfp.png" alt="pfp" style="width: 200px" class="profile-pfp img-fluid" />
+            <input type="file" class="upload-img mt-3" />
+          </div>
+
+          <div class="d-flex flex-column ms-auto text-end">
+            <p class="fs-5 text-start">FULL NAME</p>
+            <input type="text" class="edit-name form-control w-lg-100 fs-4 py-2 mb-3 text-center shadow" placeholder="" aria-label="Username" aria-describedby="basic-addon1" />
+
+            <button class="confirm-change-btn btn btn-riot-red fs-4 mt-auto" href="./editProfile.html">CONFIRM</button>
+            <a class="reset-password-link fs-5 text-end mt-3" style="cursor: pointer">RESET PASSWORD</a>
+          </div>
         </div>
       </div>
     </div>
     <!-- CONTAINER FOR NEWSLETTER AND FOOTER -->
-    <div class="footer-container container-fluid mt-10 g-0">
+    <div class="footer-container d-none container-fluid mt-10 g-0">
       <!-- NEWSLETTER -->
       <div class="bg-riot-red py-8">
         <div class="container d-flex flex-column justify-content-center align-items-center g-0">

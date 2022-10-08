@@ -6,6 +6,7 @@ class navView {
   private signinBtn = <HTMLButtonElement>document.querySelector(".signin-btn");
   private pfpDropdown = <HTMLImageElement>document.querySelector(".pfp-dropdown");
   private dropEmail = <HTMLButtonElement>document.querySelector(".drop-email");
+  private adminLink = <any>document.querySelector(".admin-link");
 
   private spinner = <HTMLDivElement>document.querySelector(".spinner");
   private contentContainer = <HTMLDivElement>document.querySelector(".content-container");
@@ -34,6 +35,8 @@ class navView {
         />`
         );
         this.dropEmail.textContent = this.userData.email;
+
+        if (this.userData.admin == true) this.adminLink.classList.remove("d-none");
 
         this.removeSpinner();
       } else {

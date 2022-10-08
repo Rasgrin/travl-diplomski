@@ -36,7 +36,9 @@ export const updateDocument = async (collection: string, id: string, data: objec
   try {
     const documentRef = firestore.doc(db, collection, id);
     await firestore.updateDoc(documentRef, data);
-  } catch (err) {}
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const deleteDocument = async (collection: string, id: string) => {

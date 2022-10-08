@@ -7,6 +7,7 @@ import destinationsView from "../views/destinationsView";
 import navView from "../views/navView";
 import searchView from "../views/searchView";
 import checkoutView from "../views/checkoutView";
+import profileEditView from "../views/profileEditView";
 import * as model from "../models/model";
 
 const controlNav = () => {
@@ -38,6 +39,13 @@ const controlSearch = () => {
 
 const controlCheckout = () => {
   checkoutView.renderCheckout();
+  checkoutView.addRemoveHandler();
+  checkoutView.addConfirmHandler();
+};
+
+const controlEditProfile = () => {
+  profileEditView.renderEdit();
+  profileEditView.addImgHandler();
 };
 
 const init = () => {
@@ -48,5 +56,6 @@ const init = () => {
   if (location.href === "http://localhost:1234/destinations.html") controlDestinations();
   if (location.href === "http://localhost:1234/index.html" || location.href === "http://localhost:1234/flights.html") controlSearch();
   if (location.href === "http://localhost:1234/checkout.html") controlCheckout();
+  if (location.href === "http://localhost:1234/editProfile.html") controlEditProfile();
 };
 init();

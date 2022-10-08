@@ -24,7 +24,7 @@ class Profile {
             const airlineUrl: any = await downloadImg(`airlines/${reservation.airline}.png`);
 
             const html: string = `
-            <div class="d-flex flex-lg-row flex-md-column flex-sm-column mb-5 w-100 py-5 bg-light shadow">
+            <div class="d-flex flex-lg-row flex-md-column flex-sm-column mb-5 w-100 py-5 bg-white shadow">
               <div class="d-flex flex-row mb-lg-0 mb-md-3 mb-sm-3">
                 <img class="mx-5 img-fluid my-auto" src="${airlineUrl}" alt="airway" style="width: 100px" />
                 <p class="text-center my-auto fs-4 me-lg-5 ms-lg-0 ms-md-auto ms-sm-auto">${reservation.date}</p>
